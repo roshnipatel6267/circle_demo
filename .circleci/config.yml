@@ -20,7 +20,7 @@ jobs:
           name: Build Docker image
           command: |
             docker build -t nodejswebapp1 -t roshnipatel/nodejswebapp1:latest .
-            echo $DOCKER_TOKEN | docker login -u roshnipatel--password-stdin
+            echo $DOCKER_TOKEN | docker login --password-stdin
             docker push roshnipatel/nodejswebapp1:latest
 
 workflows:
